@@ -33,10 +33,8 @@ g++ -c CTargaImage.cpp
 g++ -c Pilot.cpp
 g++ -c UsbongUtils.cpp
 
-#g++ -o mainOutput main.o OpenGLCanvas.o -lGL -lGLU -lglut
-# edited by Mike, 20210126
-# g++ -o ./output/mainOutputLinux mainLinux.o OpenGLCanvas.o MyDynamicObject.o RobotShip.o Font.o Beam.o Asteroid.o Level.o PolygonUtils.o CTargaImage.o Pilot.o UsbongUtils.o -lGL -lGLU -lglut
-g++ -o ./output/UsbongAutomotiveLinux mainLinux.o OpenGLCanvas.o MyDynamicObject.o RobotShip.o Font.o Beam.o Asteroid.o Level.o PolygonUtils.o CTargaImage.o Pilot.o UsbongUtils.o -lGL -lGLU -lglut
+#edited by Mike, 20220218
+g++ -o ./output/UsbongPalakaLinux mainLinux.o OpenGLCanvas.o MyDynamicObject.o RobotShip.o Font.o Beam.o Asteroid.o Level.o PolygonUtils.o CTargaImage.o Pilot.o UsbongUtils.o -lGL -lGLU -lglut
 
 #added by Mike, 20210220; removed by Mike, 20220218
 #cp -r ./*.o ./objectFilesLinux/
