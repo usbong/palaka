@@ -1,5 +1,8 @@
 # Usbong Palaka: ROBOT ARMOR
 
+## GitHub Command Notes
+https://github.com/usbong/tugon/blob/main/notes/githubCommandsNotes.md
+
 ## Open Source Software License
 Copyright 2022 SYSON, MICHAEL B.
 
