@@ -3,6 +3,10 @@
 ## GitHub Command Notes
 https://github.com/usbong/tugon/blob/main/notes/githubCommandsNotes.md
 
+## Blender 3D Tool Notes (last accessed: 20220318)
+https://download.blender.org/release/<br/>
+https://www.blender.org/
+
 ## Open Source Software License
 Copyright 2022 SYSON, MICHAEL B.
 
