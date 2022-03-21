@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Usbong Social Systems, Inc.
+ * Copyright 2020~2022 SYSON, MICHAEL B.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,18 +12,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @company: USBONG SOCIAL SYSTEMS, INC. (USBONG)
+ * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20201010
- * @date updated: 20201117
+ * @date updated: 20220321; from 20201117
+ * @website address: http://www.usbong.ph
  *
  * Acknowledgments:
  * 1) "Bulalakaw Wars" Team (2007): 
  * Syson, M., Camacho, R., Gonzales, D., Del Rosario, R., Vidal, E., et al.
  *
- */
- 
-/*
+ * Reference Note:
  * This program demonstrates how to render
  * a simple heads-up display.  It uses a
  * font texture to display the text.
@@ -260,7 +259,7 @@ void setupFont(int myFontTextureObject)
     glBindTexture(GL_TEXTURE_2D, myFontTextureObject);
 
     /* create OpenGL texture out of targa file */
-    load_tga("textures/font.tga");
+    load_tga((char*)"textures/font.tga");
     
 	/* set texture parameters */
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);

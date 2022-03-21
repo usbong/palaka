@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2021 Usbong Social Systems, Inc.
+ * Copyright 2020~2022 SYSON, MICHAEL B.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,10 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @company: USBONG SOCIAL SYSTEMS, INC. (USBONG)
+ * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20201016
- * @date updated: 20210219
+ * @date updated: 20220321; from 20210219
+ * @website address: http://www.usbong.ph
  *
  * Acknowledgments:
  * 1) "Bulalakaw Wars" Team (2007): 
@@ -146,7 +147,7 @@ void Asteroid::setup()
     glBindTexture(GL_TEXTURE_2D, myTextureObject);//1);
 
     /* create OpenGL texture out of targa file */
-    load_tga("textures/asteroid.tga");
+    load_tga((char*)"textures/asteroid.tga");
 
     /* set texture parameters */
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);

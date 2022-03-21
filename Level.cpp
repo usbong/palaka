@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2021 Usbong Social Systems, Inc.
+ * Copyright 2020~2022 SYSON, MICHAEL B.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,10 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @company: USBONG SOCIAL SYSTEMS, INC. (USBONG)
+ * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20201118
- * @date updated: 20210211
+ * @date updated: 20220321; from 20210211
+ * @website address: http://www.usbong.ph
  *
  * Acknowledgments:
  * 1) "Bulalakaw Wars" Team (2007): 
@@ -396,7 +397,7 @@ void Level::setupLevel(int myLevelTextureObject)
 //	myUsbongUtils->read("inputLevel1.csv"); 	
 */	
 	//added by Mike, 20210208
-	read("inputLevel1.csv");
+	read((char*)"inputLevel1.csv");
 	
 	//TO-DO: -add: in input file, max size of x, y, and z axes
 	//TO-DO: -add: auto-update iCurrentLevelMapContainer
@@ -416,7 +417,7 @@ void Level::setupLevel(int myLevelTextureObject)
     //edited by Mike, 20201119
 //    load_tga("textures/font.tga");
 	//TO-DO: -reverify: if level.tga is loaded
-    load_tga("textures/level.tga");
+    load_tga((char*)"textures/level.tga");
     
 	/* set texture parameters */
 	//Note: GL_CLAMP: each texture had a 1-pixel border

@@ -8,15 +8,16 @@
 # @company: USBONG
 # @author: SYSON, MICHAEL B.
 # @date created: 20200930
-# @last updated: 20220218; from 20210220
-# @company: http://www.usbong.ph
+# @last updated: 20220321; from 20220218
+# @website address: http://www.usbong.ph
 #
 # Reference:
 # 1) https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html;
 # last accessed: 20200930
 
-cp -r ./textures ./output/
-cp -r ./input ./output/
+# removed by Mike, 20220321
+# cp -r ./textures ./output/
+# cp -r ./input ./output/
 
 #rm *.o
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2021 Usbong Social Systems, Inc.
+ * Copyright 2020~2022 SYSON, MICHAEL B.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,10 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @company: USBONG SOCIAL SYSTEMS, INC. (USBONG)
+ * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20210304
+ * @date updated: 20220321; from 20210304
+ * @website address: http://www.usbong.ph
  *
  * Reference: 
  * 1) Astle, D. and Hawkin, K. (2004). "Beginning OpenGL game programming". USA: Thomson Course Technology
@@ -220,7 +221,7 @@ void RobotShip::setup()
     glBindTexture(GL_TEXTURE_2D, 1);
 	
 	/* create OpenGL texture out of targa file */
-    load_tga("textures/body/halimbawa.body.tga");
+    load_tga((char*)"textures/body/halimbawa.body.tga");
 	
     /* set texture parameters */
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
@@ -235,7 +236,7 @@ void RobotShip::setup()
     glBindTexture(GL_TEXTURE_2D, 5);
 	
 	/* create OpenGL texture out of targa file */
-    load_tga("textures/cockpit/halimbawa.cockpit.tga");
+    load_tga((char*)"textures/cockpit/halimbawa.cockpit.tga");
 	
     /* set texture parameters */
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
@@ -250,7 +251,7 @@ void RobotShip::setup()
     glBindTexture(GL_TEXTURE_2D, 8);
 	
 	/* create OpenGL texture out of targa file */
-    load_tga("textures/wings/halimbawa.wings.tga");
+    load_tga((char*)"textures/wings/halimbawa.wings.tga");
 	
 /*	
 	//EXPLOSION/ DEATH ANIMATION
