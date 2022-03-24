@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200926
- * @date updated: 20220217; from 20210304
+ * @date updated: 20220324; from 20220217
  * @website: http://www.usbong.ph 
  *
  * References:
@@ -946,18 +946,6 @@ void OpenGLCanvas::render()
     else if (currentState==HIGHSCORE_SCREEN) {
     }
     else if (currentState==GAME_SCREEN) {
-/* //removed by Mike, 20201117
-//TO-DO: -update: this
-		sprintf(tempText,"USBONG");
-		//TO-DO: -update: this to not add 0.1 in y-axis
-//	    draw_string(0, 0, tempText);    	
-		//edited by Mike, 2020117
-//	    draw_string(0, 0.1, tempText);    	
-	    draw_string(0, 0.1, tempText);    	
-	    glDisable(GL_TEXTURE_2D);
-	    glBindTexture(GL_TEXTURE_2D, 0);
-*/
-
   	//added by Mike, 20201117
     //font 
     /* select and enable texture FONT_TEXTURE */
@@ -965,16 +953,34 @@ void OpenGLCanvas::render()
     glBindTexture(GL_TEXTURE_2D, FONT_TEXTURE);
     glEnable(GL_TEXTURE_2D);
 
-  	//TO-DO: -update: this
 	sprintf(tempText,"USBONG");
-	//TO-DO: -update: this to not add 0.1 in y-axis
-//	    draw_string(0, 0, tempText);    	
-	//edited by Mike, 2020117
-//	    draw_string(0, 0.1, tempText);    	
     draw_string(0.0f, 0.1f, 0.0f, tempText);    	
 
     glDisable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, 0);
+    
+    //added by Mike, 20220324 
+    glPushMatrix();		    
+		//to make anchor/origin/reference point start at top-left
+    	glTranslatef(0.0f, 0.1f, 0.0f);   
+		glColor3f(1.0f, 1.0f, 1.0f); //set to default, i.e. white
+    	//glColor3f(0.0f, 0.0f, 0.0f); //set to default, i.e. black
+		
+		//note: re-verified: drawn output by hand without computer assistance
+		glBegin(GL_QUADS); // Each set of 4 vertices form a quad
+//        	glTexCoord2f(tx, ty);
+        	glVertex3f(0.0f, 0.0f, 0.0f);
+//        	glTexCoord2f(tx + 0.078125f, ty);
+      		glVertex3f(0.0f, -0.1f, 0.0f);      
+//        	glTexCoord2f(tx + 0.078125f, ty + 0.125f);
+      		glVertex3f(0.1f, -0.1f, 0.0f);              
+//			glTexCoord2f(tx, ty + 0.125f);
+      		glVertex3f(0.1f, 0.0f, 0.0f);      
+   		glEnd();      		    	
+	glPopMatrix();
+    
+    
+    
 
 
 	//added by Mike, 20201020
