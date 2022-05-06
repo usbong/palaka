@@ -7,6 +7,10 @@ https://github.com/usbong/tugon/blob/main/notes/githubCommandsNotes.md
 https://download.blender.org/release/<br/>
 https://www.blender.org/
 
+## GIMP (GNU Image Manipulation Program) Tool Notes (last accessed: 20220506)
+https://www.gimp.org/<br/>
+https://www.gimp.org/tutorials/Simple_Animations/
+
 ## Open Source Software License
 Copyright 2022 SYSON, MICHAEL B.
 
