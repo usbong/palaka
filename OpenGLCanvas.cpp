@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200926
- * @date updated: 20220324; from 20220217
+ * @date updated: 20220527; from 20220324
  * @website: http://www.usbong.ph 
  *
  * References:
@@ -1009,7 +1009,7 @@ void OpenGLCanvas::render()
 	//TO-DO: -reverify: these
 	// calculate aspect ratio of window
 	//gluPerspective(52.0f,(GLfloat)width/(GLfloat)height,1.0f,1000.0f);	
-/*    //edited by Mike, 20201022
+/*    //edited by Mike, 202010222
     gluPerspective(90.0, // field-of-view angle
                    4.0 / 3.0, // aspect ratio
                    1.0, // near plane
@@ -1088,13 +1088,20 @@ void OpenGLCanvas::render()
 
 	//note: reference point/origin at center; not top-left
 
+/*	//edited by Mike, 20220527
 	//added by Mike, 20210220
 	//ISOMETRIC VIEW					  	
 	//-----
 	//added by Mike, 20201115; edited by Mike, 20220217
 	glRotatef(45, 1.0f, 0.0f, 0.0f);
 	glRotatef(30, 0.0f, 1.0f, 0.0f);
-  
+*/  
+	
+	//note: top view; non-isometric view
+	//TO-DO: -update: robot parts position
+	glRotatef(45, 1.0f, 0.0f, 0.0f);
+//	glRotatef(30, 0.0f, 1.0f, 0.0f);
+
   //set camera to be farther
   glScalef(0.2f, 0.2f, 0.2f);
 	//-----
