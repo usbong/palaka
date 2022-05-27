@@ -1,5 +1,9 @@
 # Usbong Palaka: ROBOT ARMOR
 
+<img src="https://github.com/usbong/documentation/blob/master/Usbong/R%26D/Automotive/UsbongAutomotive/screenshots/UsbongAutomotiveV20210205T1703.gif" width="60%">
+
+### Reference: [Usbong R&D: Automotive](https://github.com/usbong/documentation/tree/master/Usbong/R%26D/Automotive/UsbongAutomotive)
+
 ## GitHub Command Notes
 https://github.com/usbong/tugon/blob/main/notes/githubCommandsNotes.md
 
