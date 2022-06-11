@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200926
- * @date updated: 20220527; from 20220324
+ * @date updated: 20220611; from 20220610
  * @website: http://www.usbong.ph 
  *
  * References:
@@ -1088,19 +1088,25 @@ void OpenGLCanvas::render()
 
 	//note: reference point/origin at center; not top-left
 
-/*	//edited by Mike, 20220527
+	//edited by Mike, 20220527
 	//added by Mike, 20210220
-	//ISOMETRIC VIEW					  	
+	//ISOMETRIC VIEW; TO-DO: -reverify: control movement due to NEEDs 慣れ
+	//note: MAP in Front Mission: Gun Hazard
 	//-----
 	//added by Mike, 20201115; edited by Mike, 20220217
 	glRotatef(45, 1.0f, 0.0f, 0.0f);
 	glRotatef(30, 0.0f, 1.0f, 0.0f);
-*/  
+  
 	
+/*	
+	//edited by Mike, 20220611
 	//note: top view; non-isometric view
+	//note#2: MAP in New Super Mario Bros. U Deluxe
+	//note#3: reusable with Virtual-On Arcade; Armored Core Phantasma Battle
 	//TO-DO: -update: robot parts position
 	glRotatef(45, 1.0f, 0.0f, 0.0f);
 //	glRotatef(30, 0.0f, 1.0f, 0.0f);
+*/
 
   //set camera to be farther
   glScalef(0.2f, 0.2f, 0.2f);
