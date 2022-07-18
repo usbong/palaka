@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20220611; from 20220609
+ * @date updated: 20220718; from 20220611
  * @website address: http://www.usbong.ph
  *
  * Reference: 
@@ -732,10 +732,17 @@ void RobotShip::drawRobotShip()
 
 							 drawUpperLeg(-0.1f, -0.5f, 0.0f); //left
 							 drawUpperLeg(0.3f, -0.5f, 0.0f); //right        
-			
+
+/* //edited by Mike, 20220718			
 							 glScalef(1.0f, 0.7f, 1.0f);
 							   drawBody(0.1f, -0.15f, 0.0f);
 							   drawHead(0.1f, 0.2f, -0.1f);		  
+							 glScalef(1.0f, 1.0f, 1.0f);
+*/							
+							 //note: TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							   drawBody(0.1f, -0.15f, 0.0f);
 							 glScalef(1.0f, 1.0f, 1.0f);
 
                    		     glScalef(1.0f, 1.4f, 1.0f);
@@ -814,6 +821,7 @@ void RobotShip::drawRobotShip()
 							 drawUpperLeg(-0.1f, -0.5f, 0.0f); //left
 							 drawUpperLeg(0.3f, -0.5f, 0.0f); //right        
 
+/* //edited by Mike, 20220718 
  //edited by Mike, 20220611; note: use IF isometric view	
 							 glScalef(1.0f, 0.65f, 1.0f);
 							  //edited by Mike, 20220611
@@ -822,7 +830,7 @@ void RobotShip::drawRobotShip()
 							  drawBody(0.1f, -0.15f, 0.0f);
 							 glScalef(1.0f, 1.0f, 1.0f);
 
-/*
+*/
 							 //note: use if TOP-VIEW, non-isometric
 							 glScalef(1.0f, 0.65f, 1.0f);
 							  //edited by Mike, 20220611
@@ -830,7 +838,7 @@ void RobotShip::drawRobotShip()
 							  drawHead(0.1f, 0.2f, -0.1f);
 							  //drawHead(0.1f, 0.2f, -0.4f);
 							 glScalef(1.0f, 1.0f, 1.0f);
-*/
+
 
                    		     glScalef(1.0f, 1.4f, 1.0f);
 							   drawLowerArm(0.4f, -0.2f, 0.0f); //right
@@ -1167,7 +1175,32 @@ void RobotShip::drawRobotShip()
 								drawUpperLeg(-0.1f, -0.5f, 0.0f); //left
 							glRotatef(-legAngles[LEFT], 1.0f, 0.0f, 0.0f);
 
-							drawBody(0.1f, -0.15f, 0.0f);	
+
+							//added by Mike, 20220718
+							//note: non-ISOMETRIC VIEW
+			                if (bIsFiringBeam) {	
+								drawWeapon(0.3f, -0.15f, -0.5f);
+							}
+
+
+//removed by Mike, 20220718
+//							drawBody(0.1f, -0.15f, 0.0f);	
+							
+/* //edited by Mike, 20220718			
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawBody(0.1f, -0.15f, 0.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							 glScalef(1.0f, 1.0f, 1.0f);
+*/
+							
+													
+							 //note: TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							   drawBody(0.1f, -0.15f, 0.0f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+
+							
 
 						   //ARM
 						   if (bIsFiringBeam) {
@@ -1198,12 +1231,15 @@ void RobotShip::drawRobotShip()
 								glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);
 						   }
 							
+/* //removed by Mike, 20220718; note: use with ISOMETRIC-view							
 							//added by Mike, 20210110
 			                if (bIsFiringBeam) {
 								drawWeapon(0.3f, -0.15f, -0.5f);	
 							}
+*/							
 	
-							drawHead(0.1f, 0.2f, -0.1f);		
+//removed by Mike, 20220718	
+//							drawHead(0.1f, 0.2f, -0.1f);		
 					    }
 						else if (currentFacingState==FACING_DOWN)
 					    {
@@ -1526,8 +1562,29 @@ void RobotShip::drawRobotShip()
 									drawUpperLeg(0.2f, -0.5f, 0.0f); //right        
 		            			glRotatef(-legAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 
+
+
+/* //edited by Mike, 20220718
+//							  drawHead(0.1f, 0.2f, -0.1f);
+//							  drawBody(0.1f, -0.15f, 0.0f);
+
+ 							//edited by Mike, 20220611; note: use IF isometric view	
+							 glScalef(1.0f, 0.65f, 1.0f);
+							  //edited by Mike, 20220611
 							  drawHead(0.1f, 0.2f, -0.1f);
+							  //drawHead(0.1f, 0.2f, -0.4f);
 							  drawBody(0.1f, -0.15f, 0.0f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+
+*/
+							 //note: use if TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.65f, 1.0f);
+							  //edited by Mike, 20220611
+							  drawBody(0.1f, -0.15f, 0.0f);
+							  drawHead(0.1f, 0.2f, -0.1f);
+							  //drawHead(0.1f, 0.2f, -0.4f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+							 
 
 			                   //ARM
 							   if (bIsFiringBeam) {
@@ -2696,15 +2753,27 @@ void RobotShip::drawRobotShip()
 								}	
 								//execute addition here
 								iFiringBeamCount=iFiringBeamCount+1;
-								
+	
 								drawWeapon(0.3f, -0.15f, -0.5f);
 							}
 
 
 							glTranslatef(0.0f, -0.05f, 0.05f);
 
-							drawBody(0.1f, -0.15f, 0.0f);	
-							drawHead(0.1f, 0.2f, -0.1f);		
+							
+/* //edited by Mike, 20220718			
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawBody(0.1f, -0.15f, 0.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							 glScalef(1.0f, 1.0f, 1.0f);
+*/
+							
+							 //note: TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							   drawBody(0.1f, -0.15f, 0.0f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+
 							  
 						  //added by Mike, 20210111
 						  if (bIsExecutingPunch) {
@@ -2790,7 +2859,7 @@ void RobotShip::drawRobotShip()
 								glRotatef(armAngles[LEFT], 1.0f, 0.0f, 0.0f);							
 									drawUpperArm(-0.2f, 0.0f, 0.0f); //left				            			
 								glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);															
-						  }
+						  }					  
 					    }
 					    else if (currentFacingState==FACING_RIGHT_AND_UP)
 					    {
@@ -2996,9 +3065,42 @@ void RobotShip::drawRobotShip()
 							}
 							
 							glTranslatef(0.0f, -0.05f, 0.05f);							
+														
+/* //edited by Mike, 20220718
+//							  drawHead(0.1f, 0.2f, -0.1f);//removed by Mike, 20220718
+//							drawBody(0.1f, -0.15f, 0.0f);	
 							
-							drawHead(0.1f, 0.2f, -0.1f);
-							drawBody(0.1f, -0.15f, 0.0f);
+/* //edited by Mike, 20220718			
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawBody(0.1f, -0.15f, 0.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							 glScalef(1.0f, 1.0f, 1.0f);
+*/
+							
+							 //note: TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							   drawBody(0.1f, -0.15f, 0.0f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+//							  drawBody(0.1f, -0.15f, 0.0f);
+/*
+ 							//edited by Mike, 20220611; note: use IF isometric view	
+							 glScalef(1.0f, 0.65f, 1.0f);
+							  //edited by Mike, 20220611
+							  drawHead(0.1f, 0.2f, -0.1f);
+							  //drawHead(0.1f, 0.2f, -0.4f);
+							  drawBody(0.1f, -0.15f, 0.0f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+
+*/
+							 //note: use if TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.65f, 1.0f);
+							  //edited by Mike, 20220611
+							  drawBody(0.1f, -0.15f, 0.0f);
+							  drawHead(0.1f, 0.2f, -0.1f);
+							  //drawHead(0.1f, 0.2f, -0.4f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+							
 
 							if (bIsFiringBeam) {	
 								glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
