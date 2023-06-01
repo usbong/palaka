@@ -4,6 +4,35 @@
 
 ### Reference: [Usbong R&D: Automotive](https://github.com/usbong/documentation/tree/master/Usbong/R%26D/Automotive/UsbongAutomotive)
 
+## Installation Notes
+
+### Linux Machine
+
+1) Execute the following COMMAND in the Terminal Window: <b>./install.sh</b>
+
+### Windows Machine
+
+### Problem: When executing UsbongAutomotive.exe, computer notifies you that glut32.dll does not exist
+
+<b>Answer:</b> Execute the following steps:<br/>
+1) Download <b>glut-3.7.6-bin.zip (117 KB)</b> from https://user.xmission.com/~nate/glut.html.<br/>
+--> web address last accessed: 20230601; from 20210216<br/>
+
+2) Extract zip file to present directory.<br/>
+
+3) Copy "glut32.dll" from extracted folder.<br/>
+
+4) Paste "glut32.dll" to palaka-main's output folder.<br/>
+--> Reminder: UsbongAutomotive.exe is located in the output folder.<br/>
+
+Done! You can now execute UsbongAutomotive.exe!
+
+#### Reference:
+https://answers.microsoft.com/en-us/windows/forum/windows_vista-windows_programs/opengl-glut-used-to-work-on-xp-get-glut32dll-not/8858c510-dc6c-4e11-9958-d3cb4a883227<br/>
+last accessed: 20210216T0512<br/>
+answer by: MattS440, 20100118<br/>
+
+
 ## GitHub Command Notes
 https://github.com/usbong/tugon/blob/main/notes/githubCommandsNotes.md
 
@@ -16,7 +45,7 @@ https://www.gimp.org/<br/>
 https://www.gimp.org/tutorials/Simple_Animations/
 
 ## Open Source Software License
-Copyright 2022 SYSON, MICHAEL B.
+Copyright 2022~2023 SYSON, MICHAEL B.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
