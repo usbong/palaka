@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2022 SYSON, MICHAEL B.
+ * Copyright 2020~2023 SYSON, MICHAEL B.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20220930; from 20220718
+ * @date updated: 20230602; from 20220930; 
  * @website address: http://www.usbong.ph
  *
  * Reference: 
@@ -849,19 +849,13 @@ void RobotShip::drawRobotShip()
 							   
 							 drawUpperArm(0.4f, 0.0f, 0.0f); //right        
 						}			
-					    else if ((currentFacingState==FACING_RIGHT_AND_UP))
+					    else if (currentFacingState==FACING_RIGHT_AND_UP)
 					    {
                    		     glScalef(1.0f, 1.4f, 1.0f);
 							   drawLowerArm(-0.2f, -0.2f, 0.0f); //left
                    		     glScalef(1.0f, 1.0f, 1.0f); //reset
 
 							 drawUpperArm(-0.2f, 0.0f, 0.0f); //left
-
-                   		     glScalef(1.0f, 1.4f, 1.0f);
-							     drawLowerArm(0.4f, -0.2f, 0.0f); //right
-                   		     glScalef(1.0f, 1.0f, 1.0f); //reset
-							   
-							 drawUpperArm(0.4f, 0.0f, 0.0f); //right        
 
 							 //edited by Mike, 20201209
 							 drawLowerLeg(-0.1f, -0.7f, 0.0f); //left
@@ -870,12 +864,19 @@ void RobotShip::drawRobotShip()
 							 //edited by Mike, 20210103
 							 drawUpperLeg(-0.1f, -0.5f, 0.0f); //left
 							 drawUpperLeg(0.3f, -0.5f, 0.0f); //right        
-												
+																																		
 							 //added by Mike, 20210123
 							 glScalef(1.0f, 0.5f, 1.0f);							
 							   drawHead(0.1f, 0.2f, -0.1f);
 							   drawBody(0.1f, -0.15f, 0.0f);
 							 glScalef(1.0f, 1.0f, 1.0f);							
+
+							 //added by Mike, 20230602
+                   		     glScalef(1.0f, 1.4f, 1.0f);
+							     drawLowerArm(0.4f, -0.2f, 0.0f); //right
+                   		     glScalef(1.0f, 1.0f, 1.0f); //reset
+							   
+							 drawUpperArm(0.4f, 0.0f, 0.0f); //right
 						}			
 						else if (currentFacingState==FACING_LEFT_AND_DOWN)
 					    {
