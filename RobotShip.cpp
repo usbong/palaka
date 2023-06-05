@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20230602; from 20220930; 
+ * @date updated: 20230605; from 20230602; 
  * @website address: http://www.usbong.ph
  *
  * Reference: 
@@ -588,6 +588,9 @@ void RobotShip::drawRobotShip()
 
 	//added by Mike, 20210201
     if (currentFacingState==FACING_LEFT_AND_UP) {
+    	//added by Mike, 20230605
+        glTranslatef(0.0f, -1.0f, 0.0f); //myWidth/3); 
+
         glRotatef(45, 0.0f, 1.0f, 0.0f);    	
 	}
 	else if (currentFacingState==FACING_RIGHT_AND_UP) {
@@ -595,9 +598,15 @@ void RobotShip::drawRobotShip()
 	}
 	//added by Mike, 20210202
 	else if (currentFacingState==FACING_LEFT_AND_DOWN) {
-        glRotatef(135, 0.0f, 1.0f, 0.0f);    	
+    	//added by Mike, 20230605
+        glTranslatef(1.0f, 1.0f, 1.0f); //myWidth/3 
+        
+        glRotatef(135, 0.0f, 1.0f, 0.0f);    			
 	}
 	else if (currentFacingState==FACING_RIGHT_AND_DOWN) {
+    	//added by Mike, 20230605
+        glTranslatef(1.0f, 0.5f, 0.0f);
+
         glRotatef(-135, 0.0f, 1.0f, 0.0f);    	
 	}
 	//added by Mike, 20201201; edited by Mike, 20210201
@@ -864,13 +873,20 @@ void RobotShip::drawRobotShip()
 							 //edited by Mike, 20210103
 							 drawUpperLeg(-0.1f, -0.5f, 0.0f); //left
 							 drawUpperLeg(0.3f, -0.5f, 0.0f); //right        
-																																		
+													
+/* //edited by Mike, 20230605
 							 //added by Mike, 20210123
 							 glScalef(1.0f, 0.5f, 1.0f);							
 							   drawHead(0.1f, 0.2f, -0.1f);
 							   drawBody(0.1f, -0.15f, 0.0f);
 							 glScalef(1.0f, 1.0f, 1.0f);							
-
+*/
+							 //note: TOP-VIEW, non-isometric
+							 glScalef(1.0f, 0.7f, 1.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
+							   drawBody(0.1f, -0.15f, 0.0f);
+							 glScalef(1.0f, 1.0f, 1.0f);
+							
 							 //added by Mike, 20230602
                    		     glScalef(1.0f, 1.4f, 1.0f);
 							     drawLowerArm(0.4f, -0.2f, 0.0f); //right
@@ -893,17 +909,25 @@ void RobotShip::drawRobotShip()
 							 drawUpperLeg(-0.1f, -0.5f, 0.0f); //left
 							 drawUpperLeg(0.3f, -0.5f, 0.0f); //right        
 
+/* //removed by Mike, 20230605
 							 glScalef(1.0f, 1.4f, 1.0f);
 							   	 drawLowerArm(-0.2f, -0.2f, 0.0f); //left
                    		     glScalef(1.0f, 1.0f, 1.0f); //reset
 
 							 drawUpperArm(-0.2f, 0.0f, 0.0f); //left
-
+*/
 							 //added by Mike, 20210123
 							 glScalef(1.0f, 0.5f, 1.0f);							
 							   drawBody(0.1f, -0.15f, 0.0f);
 							   drawHead(0.1f, 0.2f, -0.1f);		  
 							 glScalef(1.0f, 1.0f, 1.0f);														
+
+							 //added by Mike, 20230605
+							 glScalef(1.0f, 1.4f, 1.0f);
+							   	 drawLowerArm(-0.2f, -0.2f, 0.0f); //left
+                   		     glScalef(1.0f, 1.0f, 1.0f); //reset
+
+							 drawUpperArm(-0.2f, 0.0f, 0.0f); //left
 						}
 						break;
 					case WALKING_MOVING_STATE:
@@ -1723,10 +1747,11 @@ void RobotShip::drawRobotShip()
 									glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);
 								}
 
+/*	//removed by Mike, 20230605
 			                if (bIsFiringBeam) {	
 									drawWeapon(0.3f, -0.15f, -0.5f);	
 							}
-
+*/
 							glTranslatef(0.05f, 0.0f, 0.0f);
 							glRotatef(legAngles[LEFT], 1.0f, 0.0f, 0.0f);
 								drawLowerLeg(-0.1f, -0.7f, 0.0f); //left	
@@ -1740,9 +1765,16 @@ void RobotShip::drawRobotShip()
 								drawUpperLeg(0.2f, -0.5f, 0.0f); //right        
 							glRotatef(-legAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 							glTranslatef(-0.05f, 0.0f, 0.0f);
+
+						   //added by Mike, 20230605
+						   drawHead(0.1f, 0.2f, -0.1f);
+						   drawBody(0.1f, -0.15f, 0.0f);
 							
 						   //ARM
 						   if (bIsFiringBeam) {
+							  //added by Mike, 20230605
+							  drawWeapon(0.3f, -0.15f, -0.5f);	
+
 							  armAngles[RIGHT]=30.0f;
 							  armAngles[LEFT]=30.0f;							   	
 
@@ -1770,8 +1802,10 @@ void RobotShip::drawRobotShip()
 								glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 							}
 
+/* //removed by Mike, 20230605						   
 						    drawHead(0.1f, 0.2f, -0.1f);
 						    drawBody(0.1f, -0.15f, 0.0f);
+*/						    
 					    }
 						else if (currentFacingState==FACING_LEFT_AND_UP)
 					    {
@@ -1894,6 +1928,7 @@ void RobotShip::drawRobotShip()
 									drawUpperArm(0.4f, 0.0f, 0.0f); //right       								   
 								glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);								
 
+/* removed by Mike, 20230605
 								glRotatef(armAngles[LEFT], 1.0f, 0.0f, 0.0f);
 									glTranslatef(0.0f, 0.0f, 0.1f);
 									glRotatef(45, 1.0f, 0.0f, 0.0f);							
@@ -1904,6 +1939,7 @@ void RobotShip::drawRobotShip()
 									//added by Mike, 20210208
 									drawUpperArm(-0.2f, 0.0f, 0.0f); //left
 								glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);
+*/								
 						    }
 								
 							drawBody(0.1f, -0.15f, 0.0f);		
@@ -1923,6 +1959,19 @@ void RobotShip::drawRobotShip()
 								glTranslatef(0.0f, 0.0f, -0.05f);
 
 								drawWeapon(0.3f, -0.15f, -0.5f);
+							}
+							//added by Mike, 20230605
+							else {
+								glRotatef(armAngles[LEFT], 1.0f, 0.0f, 0.0f);
+									glTranslatef(0.0f, 0.0f, 0.1f);
+									glRotatef(45, 1.0f, 0.0f, 0.0f);							
+										drawLowerArm(-0.2f, -0.3f, 0.0f); //left
+									glRotatef(-45, 1.0f, 0.0f, 0.0f);							
+									glTranslatef(0.0f, 0.0f, -0.1f);
+
+									//added by Mike, 20210208
+									drawUpperArm(-0.2f, 0.0f, 0.0f); //left
+								glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);								
 							}
 					    }
 						break;
