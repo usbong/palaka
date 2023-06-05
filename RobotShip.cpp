@@ -1368,7 +1368,6 @@ void RobotShip::drawRobotShip()
 									glRotatef(armAngles[LEFT], 1.0f, 0.0f, 0.0f);
 										drawUpperArm(-0.2f, 0.0f, 0.0f); //left
 									glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);
-
 								}
 								else {
 /*	//edited by Mike, 20220930
@@ -1429,7 +1428,9 @@ void RobotShip::drawRobotShip()
 								//TO-DO: -reverify: this
 								//added by Mike, 20210105
 								//set to default rotation
-								if (currentFacingState==FACING_DOWN) {
+								//removed by Mike, 20230605
+								//if (currentFacingState==FACING_DOWN) {
+								
 									if (myKeysDown[KEY_A]==TRUE) {
 				                        glTranslatef(-0.05f, 0.0f, 0.0f);
 							        	glRotatef(-40, 0.0f, 1.0f, 0.0f);			
@@ -1442,14 +1443,20 @@ void RobotShip::drawRobotShip()
 				                        glTranslatef(0.0f, -0.2f, 0.0f);
 										glRotatef(40, 0.0f, 1.0f, 0.0f);										
 									}
-								}
+								
+								//removed by Mike, 20230605
+								//}
 
 /* //removed by Mike, 20230605
 							  drawBody(0.1f, -0.15f, 0.0f);
 							  drawHead(0.1f, 0.2f, -0.1f);
 */
 			                   //ARM
-							   if (bIsFiringBeam) {
+							   if (bIsFiringBeam) {							   	
+								  //added by Mike, 20230605
+								  drawBody(0.1f, -0.15f, 0.0f);
+								  drawHead(0.1f, 0.2f, -0.1f);	
+								  							   	
 								  armAngles[RIGHT]=30.0f;
 								  armAngles[LEFT]=30.0f;							   	
 							   	  
@@ -1469,6 +1476,12 @@ void RobotShip::drawRobotShip()
 								  glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);			
 										drawWeapon(0.3f, 0.10f, -0.4f);											
 								  glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);			
+
+/*								  
+								  //added by Mike, 20230605
+								  drawBody(0.1f, -0.15f, 0.0f);
+								  drawHead(0.1f, 0.2f, -0.1f);								  
+*/
 							   }
 							   else {							
 		            			glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
@@ -1499,11 +1512,10 @@ void RobotShip::drawRobotShip()
 									glRotatef(10, 0.0f, 1.0f, 0.0f);			
 
 								}
-								
+
 							  //added by Mike, 20230605
 							  drawBody(0.1f, -0.15f, 0.0f);
 							  drawHead(0.1f, 0.2f, -0.1f);
-								
 							}
 					    }
 					    //added by Mike, 20210105
@@ -3135,6 +3147,8 @@ void RobotShip::drawRobotShip()
 							 glScalef(1.0f, 1.0f, 1.0f);
 
 */
+
+/* //removed by Mike, 20230605
 							 //note: use if TOP-VIEW, non-isometric
 							 glScalef(1.0f, 0.65f, 1.0f);
 							  //edited by Mike, 20220611
@@ -3142,7 +3156,7 @@ void RobotShip::drawRobotShip()
 							  drawHead(0.1f, 0.2f, -0.1f);
 							  //drawHead(0.1f, 0.2f, -0.4f);
 							 glScalef(1.0f, 1.0f, 1.0f);
-							
+*/							
 
 							if (bIsFiringBeam) {	
 								glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);

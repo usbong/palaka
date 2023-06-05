@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2022 SYSON, MICHAEL B.
+ * Copyright 2020~2023 SYSON, MICHAEL B.
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200926
- * @date updated: 20220718; from 20220611
+ * @date updated: 20230605; from 20220718
  * @website: http://www.usbong.ph 
  *
  * References:
@@ -132,7 +132,6 @@ enum Keys
 	KEY_W,
 	KEY_S,
 */
-	//TO-DO: -verify: gamepad
 /*	//edited by Mike, 20210129
 	KEY_A = 0,
 	KEY_D,
@@ -2321,6 +2320,7 @@ void OpenGLCanvas::update()
 //              myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());
 				//note: when held, beam particles move in waves
 				//note: move beams based on direction where robot faces 
+ //edited by Mike, 20230605				
 				if (i%2==0) {
 //                	myBeam[i]->move(rotationAngle+4, myRobotShip->getXYZPos());
                 	myBeam[i]->move(rotationAngle+4, beamPosXyz);
@@ -2329,6 +2329,8 @@ void OpenGLCanvas::update()
 //                	myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());					
                 	myBeam[i]->move(rotationAngle, beamPosXyz);					
 				}
+
+//                myBeam[i]->move(rotationAngle, beamPosXyz);					
 
 //		        sound->play_sound_clip(beam);
                 return;
