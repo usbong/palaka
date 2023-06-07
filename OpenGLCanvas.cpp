@@ -2177,6 +2177,10 @@ void OpenGLCanvas::update()
 				float *beamPosXyz = {myRobotShip->getXYZPos()};
 //				float beamPosXyz[3] = myRobotShip->getXYZPos();
 
+				//added by Mike, 20230607
+				beamPosXyz[1]-=0.3f; //y
+				beamPosXyz[0]-=2.0f; //x
+
 				//edited by Mike, 20201225
 //              myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());
 				//note: when held, beam particles move in waves
@@ -2227,7 +2231,12 @@ void OpenGLCanvas::update()
 //				float *beamPosXyz[3] = {myRobotShip->getXYZPos()};
 				//edited by Mike, 20210118
 //				beamPosXyz[2]+=2.0f;
-				beamPosXyz[2]+=1.5f;
+				//edited by Mike, 20230607
+//				beamPosXyz[2]+=1.5f;
+
+				beamPosXyz[1]-=0.2f; //y
+				beamPosXyz[0]+=5.0f; //x
+
 
 				if (i%2==0) {
                 	myBeam[i]->move(rotationAngle+4, beamPosXyz);

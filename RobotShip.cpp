@@ -1044,22 +1044,30 @@ void RobotShip::drawRobotShip()
 
 							//added by Mike, 20210110
 							if (bIsFiringBeam) {		
-								drawWeapon(0.35f, -0.15f, -0.7);
+								//removed by Mike, 20230607
+								//drawWeapon(0.35f, -0.15f, -0.7);
+								drawWeapon(0.1f, -0.15f, -0.7);
 
+/*								//removed by Mike, 20230607
 								//note: already facing up
 								if (myKeysDown[KEY_A]==TRUE) {
 									glRotatef(-8, 0.0f, 1.0f, 0.0f);			
 									glTranslatef(0.0f, 0.0f, 0.1f);
-									drawWeapon(0.35f, -0.15f, -0.7);
+										//edited by Mike, 20230607
+										//drawWeapon(0.35f, -0.15f, -0.7);
+										drawWeapon(0.1f, -0.15f, -0.7);
 									//reset
 									glTranslatef(0.0f, 0.0f, -0.1f);
 									glRotatef(8, 0.0f, 1.0f, 0.0f);			
 								}
 								else if (myKeysDown[KEY_D]==TRUE) {
 									glRotatef(6, 0.0f, 1.0f, 0.0f);																		        	
-									drawWeapon(0.35f, -0.15f, -0.7);
+										//edited by Mike, 20230607
+										//drawWeapon(0.35f, -0.15f, -0.7);
+										drawWeapon(0.1f, -0.15f, -0.7);
 									glRotatef(-6, 0.0f, 1.0f, 0.0f); //reset
 								}
+*/								
 
 							}
 /*	//removed by Mike, 20210302							
@@ -1657,7 +1665,10 @@ void RobotShip::drawRobotShip()
 										glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 										glRotatef(-15, 0.0f, 1.0f, 0.0f);
 */										
-											drawWeapon(0.2f, -0.15f, -0.5f);
+											//edited by Mike, 20230607
+//											drawWeapon(0.2f, -0.15f, -0.5f);
+											drawWeapon(0.2f, 0.0f, -0.5f);
+
 /*
 										glRotatef(15, 0.0f, 1.0f, 0.0f);
 										glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);																					
