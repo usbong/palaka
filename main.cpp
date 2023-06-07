@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2021 Usbong Social Systems, Inc.
+ * Copyright 2020~2023 USBONG
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,9 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @author: Michael Syson
+ * @company: USBONG
+ * @author: SYSON, Michael B
  * @date created: 20200926
- * @date updated: 20210128
+ * @date updated: 20230607; from 20210128
+ * @website: http://www.usbong.ph
  *
  * References:
  * 1) Dev-C++ 5.11 auto-generated OpenGL example project
@@ -95,8 +97,14 @@
 
 //added by Mike, 20200928
 //note: "static" in C/C++ = "final" in java
+//edited by Mike, 20230607
 static int myWindowWidth=640; //320
 static int myWindowHeight=640; //320
+
+/*
+static int myWindowWidth=960;//1024;//640; //320
+static int myWindowHeight=720;//1024;//640; //320
+*/
 
 //added by Mike, 20201001
 OpenGLCanvas *myOpenGLCanvas = NULL;

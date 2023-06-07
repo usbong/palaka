@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2023 SYSON, MICHAEL B.
+ * Copyright 2020~2023 USBONG
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200926
- * @date updated: 20230605; from 20220718
+ * @date updated: 20230607; from 20230605; 
  * @website: http://www.usbong.ph 
  *
  * References:
@@ -223,6 +223,12 @@ bool OpenGLCanvas::init()
 */
 	myWindowWidth=6144;
     myWindowHeight=6144;
+
+//note: values overwritten @Level.cpp constructor
+/* edited by Mike, 20230607
+	myWindowWidth=8192;
+    myWindowHeight=8192;
+*/
 
 //added by Mike, 20210207
 //TO-DO: -add: load level map as input.txt file
