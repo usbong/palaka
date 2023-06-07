@@ -2276,7 +2276,11 @@ void OpenGLCanvas::update()
 				//added by Mike, 20210112
 				float *beamPosXyz = {myRobotShip->getXYZPos()};
 //				float *beamPosXyz[3] = {myRobotShip->getXYZPos()};
-				beamPosXyz[0]+=2.0f;
+//edited by Mike, 20210207	
+//				beamPosXyz[0]+=2.0f;
+
+				beamPosXyz[0]+=1.0f; //x
+				beamPosXyz[1]+=5.0f; //y
 
 				//edited by Mike, 20201225
 //              myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());
@@ -2330,6 +2334,11 @@ void OpenGLCanvas::update()
 				//TO-DO: -reverify: if causes memory leak problem
 				float *beamPosXyz = {myRobotShip->getXYZPos()};
 //				float *beamPosXyz[3] = {myRobotShip->getXYZPos()};
+
+				//edited by Mike, 20210207	
+				beamPosXyz[0]+=1.5f; //x
+				beamPosXyz[1]-=5.0f; //y
+
 
 				//edited by Mike, 20201225
 //              myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());
