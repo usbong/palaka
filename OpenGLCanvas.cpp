@@ -1977,7 +1977,12 @@ void OpenGLCanvas::update()
 //edited by Mike, 20210207	
 //				beamPosXyz[0]+=2.0f; //center
 //				beamPosXyz[0]+=0.0f; //left arm 
-				beamPosXyz[0]+=4.0f; //right arm 
+				//edited by Mike, 20230607
+//				beamPosXyz[0]+=4.0f; //right arm 
+
+				beamPosXyz[0]+=5.0f; //x
+				beamPosXyz[1]+=2.0f; //y
+
 
 				if (i%2==0) {
                 	myBeam[i]->move(rotationAngle+4, beamPosXyz);
@@ -2027,7 +2032,12 @@ void OpenGLCanvas::update()
 //				beamPosXyz[0]+=2.0f; //center
 //				beamPosXyz[0]+=0.0f; //left arm 
 //				beamPosXyz[0]+=4.0f; //right arm 
-				beamPosXyz[0]+=1.0f; //right arm 
+				//edited by Mike, 20230607
+//				beamPosXyz[0]+=1.0f; //right arm 
+
+				beamPosXyz[0]-=1.0f; //x
+				beamPosXyz[1]+=2.4f; //y
+
 
 				if (i%2==0) {
                 	myBeam[i]->move(rotationAngle+4, beamPosXyz);
@@ -2338,7 +2348,6 @@ void OpenGLCanvas::update()
 				//edited by Mike, 20210207	
 				beamPosXyz[0]+=1.5f; //x
 				beamPosXyz[1]-=5.0f; //y
-
 
 				//edited by Mike, 20201225
 //              myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());
