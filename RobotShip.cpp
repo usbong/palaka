@@ -3213,8 +3213,9 @@ void RobotShip::drawRobotShip()
 							
 							 //note: TOP-VIEW, non-isometric
 							 glScalef(1.0f, 0.7f, 1.0f);
-							   drawHead(0.1f, 0.2f, -0.1f);		  
+							   //edited by Mike, 20230607
 							   drawBody(0.1f, -0.15f, 0.0f);
+							   drawHead(0.1f, 0.2f, -0.1f);		  
 							 glScalef(1.0f, 1.0f, 1.0f);
 //							  drawBody(0.1f, -0.15f, 0.0f);
 /*
@@ -3239,11 +3240,17 @@ void RobotShip::drawRobotShip()
 */							
 
 							if (bIsFiringBeam) {	
+/* //removed by Mike, 20230607							
 								glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 								glRotatef(-15, 0.0f, 1.0f, 0.0f);
-									drawWeapon(0.2f, -0.15f, -0.5f);
+*/								
+								//drawWeapon(0.2f, -0.15f, -0.5f);
+								drawWeapon(0.2f, 0.1f, -0.5f);
+	
+/* //removed by Mike, 20230607							
 								glRotatef(15, 0.0f, 1.0f, 0.0f);
 								glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
+*/
 							}
 
 							glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
