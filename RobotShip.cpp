@@ -1201,19 +1201,31 @@ void RobotShip::drawRobotShip()
 						   //added by Mike, 20210110
 			               if (bIsFiringBeam) {
 								if (myKeysDown[KEY_W]==TRUE) {
+/* //removed by Mike, 20230607
 									glRotatef(12, 0.0f, 1.0f, 0.0f);			
 									glTranslatef(0.0f, 0.0f, 0.1f);
-										drawWeapon(0.3f, -0.15f, -0.5f);	
+*/
+//										drawWeapon(0.3f, -0.15f, -0.5f);	
+										drawWeapon(0.3f, -0.3f, -0.5f);
+/* //removed by Mike, 20230607
 									glTranslatef(0.0f, 0.0f, -0.1f);
 									glRotatef(-12, 0.0f, 1.0f, 0.0f);			
+*/
 								}
 								else if (myKeysDown[KEY_S]==TRUE) {
+/* //removed by Mike, 20230607
 									glRotatef(-6, 0.0f, 1.0f, 0.0f);															        	
-										drawWeapon(0.3f, -0.15f, -0.5f);	
+*/
+//										drawWeapon(0.3f, -0.15f, -0.5f);	
+										drawWeapon(0.3f, -0.3f, -0.5f);
+/* //removed by Mike, 20230607
 									glRotatef(6, 0.0f, 1.0f, 0.0f);															        	
+*/
 								}
 								else {
-									drawWeapon(0.3f, -0.15f, -0.5f);										
+									//edited by Mike, 20230607
+//									drawWeapon(0.3f, -0.15f, -0.5f);										
+									drawWeapon(0.3f, -0.3f, -0.5f);
 								}
 						   }
 		
@@ -2359,7 +2371,9 @@ void RobotShip::drawRobotShip()
 							
 							//added by Mike, 20210111
 			                if (bIsFiringBeam) {
-								drawWeapon(0.3f, -0.15f, -0.5f);
+			                	//edited by Mike, 20230607
+//								drawWeapon(0.3f, -0.15f, -0.5f);
+									drawWeapon(0.3f, -0.3f, -0.5f);
 							}
 					    }
 					    else if (currentFacingState==FACING_DOWN)
