@@ -1455,7 +1455,8 @@ void RobotShip::drawRobotShip()
 							   if (bIsFiringBeam) {							   	
 								  //added by Mike, 20230605
 								  drawBody(0.1f, -0.15f, 0.0f);
-								  drawHead(0.1f, 0.2f, -0.1f);	
+								  //removed by Mike, 20230607
+								  //drawHead(0.1f, 0.2f, -0.1f);	
 								  							   	
 								  armAngles[RIGHT]=30.0f;
 								  armAngles[LEFT]=30.0f;							   	
@@ -1474,7 +1475,9 @@ void RobotShip::drawRobotShip()
 		                          drawUpperArm(0.4f, 0.0f, 0.0f); //right
 
 								  glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);			
-										drawWeapon(0.3f, 0.10f, -0.4f);											
+										//edited by Mike, 20230607
+//										drawWeapon(0.3f, 0.10f, -0.4f);											
+										drawWeapon(0.2f, 0.10f, -0.4f);
 								  glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);			
 
 /*								  
@@ -1482,6 +1485,10 @@ void RobotShip::drawRobotShip()
 								  drawBody(0.1f, -0.15f, 0.0f);
 								  drawHead(0.1f, 0.2f, -0.1f);								  
 */
+
+								  //added by Mike, 20230607
+//								  drawHead(0.1f, 0.2f, -0.1f);
+								  drawHead(0.1f, 0.0f, 0.05f);
 							   }
 							   else {							
 		            			glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
@@ -2174,7 +2181,9 @@ void RobotShip::drawRobotShip()
 					       }
 							
 						   if (bIsFiringBeam) {		
-								drawWeapon(0.35f, -0.15f, -0.7);
+						   		//edited by Mike, 20230607
+								//drawWeapon(0.35f, -0.15f, -0.7);
+								drawWeapon(0.1f, -0.15f, -0.7);
 						   }
 
 							//edited by Mike, 20210304; edited again by Mike, 20220609
@@ -2459,7 +2468,8 @@ void RobotShip::drawRobotShip()
 		                    glTranslatef(0.0f, -0.05f, 0.05f);
 							
 						  	drawBody(0.1f, -0.15f, 0.0f);
-						  	drawHead(0.1f, 0.2f, -0.1f);
+							//removed by Mike, 20230607
+						  	//drawHead(0.1f, 0.2f, -0.1f);
 								   
 							glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 							
@@ -2473,8 +2483,13 @@ void RobotShip::drawRobotShip()
 							glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 							
 							if (bIsFiringBeam) {
-								drawWeapon(0.3f, 0.10f, -0.4f);	
+								//edited by Mike, 20230607
+//								drawWeapon(0.3f, 0.10f, -0.4f);	
+								drawWeapon(0.2f, 0.10f, -0.4f);	
 							}
+
+							//added by Mike, 20230607
+						  	drawHead(0.1f, 0.2f, -0.1f);
 					    }													
 					    else if (currentFacingState==FACING_RIGHT)
 					    {
@@ -4463,11 +4478,29 @@ void RobotShip::drawWeapon(float xPos, float yPos, float zPos)
 {
 	glPushMatrix();
 		glTranslatef(xPos, yPos, zPos);
+
+		//edited by Mike, 20230607
+/*
+		if ((currentFacingState==FACING_UP) 
+			|| (currentFacingState==FACING_DOWN)) {
+			glScalef(0.25f, 0.25f, 0.7f);
+		}
+*/
+		if (currentFacingState==FACING_UP) {
+			glScalef(0.25f, 0.25f, 0.7f);
+		}
+		else if (currentFacingState==FACING_DOWN) {
+			glScalef(0.25f, 0.25f, 0.5f);
+		}
+		else {
+			//edited by Mike, 20201207
+	//		glScalef(0.1f, 0.25f, 0.1f);	
+			glScalef(0.1f, 0.25f, 0.7f);		
+	//		glScalef(0.5f, 0.3f, 0.7f);
+		}
 		
-		//edited by Mike, 20201207
-//		glScalef(0.1f, 0.25f, 0.1f);	
-		glScalef(0.1f, 0.25f, 0.7f);		
-//		glScalef(0.5f, 0.3f, 0.7f);
+
+
 		//TO-DO: -update: this
 		glColor3f(0.55f, 0.55f, 0.55f); //gray
         drawTriangledCube(0.0f, 0.0f, 0.0f);
