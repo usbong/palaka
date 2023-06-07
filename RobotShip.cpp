@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20230605; from 20230602; 
+ * @date updated: 20230607; from 20230605; 
  * @website address: http://www.usbong.ph
  *
  * Reference: 
@@ -1557,7 +1557,9 @@ void RobotShip::drawRobotShip()
 			            			glRotatef(-armAngles[LEFT], 1.0f, 0.0f, 0.0f);
 
 								}
-
+	//added by Mike, 20230607
+	//note: this part when removed causes slash action
+/* 
 								if (myKeysDown[KEY_W]==TRUE) {
 									//note: walk wall right side
 									//glRotatef(60, 0.0f, 0.0f, 1.0f);			
@@ -1568,7 +1570,19 @@ void RobotShip::drawRobotShip()
 									glRotatef(-40, 0.0f, 1.0f, 0.0f);										
 									glTranslatef(0.0f, 0.0f, -0.1f);							        	
 								}
+*/
+/* //removed by Mike, 20230607
+								if (myKeysDown[KEY_W]==TRUE) {
+									//note: walk wall right side
+									//glRotatef(60, 0.0f, 0.0f, 1.0f);			
 
+									glRotatef(40, 0.0f, 1.0f, 0.0f);			
+								}
+								else if (myKeysDown[KEY_S]==TRUE) {
+									glRotatef(-40, 0.0f, 1.0f, 0.0f);										
+									glTranslatef(0.0f, 0.0f, -0.1f);							        	
+								}
+*/
 			                    //LEGS
 		            			glRotatef(legAngles[LEFT], 1.0f, 0.0f, 0.0f);
 		            		        drawLowerLeg(-0.1f, -0.7f, 0.0f); //left
@@ -1580,6 +1594,7 @@ void RobotShip::drawRobotShip()
 									drawUpperLeg(0.2f, -0.5f, 0.0f); //right        
 		            			glRotatef(-legAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 
+/* //removed by Mike, 20230607
 								if (myKeysDown[KEY_W]==TRUE) {
 									glRotatef(-40, 0.0f, 1.0f, 0.0f);			
 								}
@@ -1587,26 +1602,47 @@ void RobotShip::drawRobotShip()
 									glTranslatef(0.0f, 0.0f, 0.1f);							        	
 									glRotatef(40, 0.0f, 1.0f, 0.0f);										
 								}
+*/
 								
 								if (bIsFiringBeam) {	
 									if (myKeysDown[KEY_W]==TRUE) {
+/*
 										glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 										glRotatef(-20, 0.0f, 1.0f, 0.0f);
-											drawWeapon(0.2f, -0.15f, -0.5f);	
+*/
+											//edited by Mike, 20230607
+//											drawWeapon(0.2f, -0.15f, -0.5f);
+//											drawWeapon(0.2f, 0.0f, 0.0f);
+											drawWeapon(0.2f, 0.0f, -0.5f);
+
+/*
 										glRotatef(20, 0.0f, 1.0f, 0.0f);
 										glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
+*/										
 									}
 									else if (myKeysDown[KEY_S]==TRUE) {
+/*										
 										glRotatef(15, 1.0f, 0.0f, 0.0f);
-											drawWeapon(0.2f, -0.15f, -0.5f);	
+*/										
+//											drawWeapon(0.2f, -0.15f, -0.5f);
+											//edited by Mike, 20230607
+//											drawWeapon(0.2f, -0.15f, 0.0f);	
+											drawWeapon(0.2f, 0.0f, -0.5f);
+
+/*
 										glRotatef(-15, 1.0f, 0.0f, 0.0f);
+*/										
 									}		
 									else {
+/*
 										glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 										glRotatef(-15, 0.0f, 1.0f, 0.0f);
+*/										
 											drawWeapon(0.2f, -0.15f, -0.5f);
+/*
 										glRotatef(15, 0.0f, 1.0f, 0.0f);
 										glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);																					
+*/										
 									}
 								}
 
@@ -2539,12 +2575,16 @@ void RobotShip::drawRobotShip()
 									glTranslatef(0.0f, 0.0f, -0.05f);
 								}									
 							    iFiringBeamCount=iFiringBeamCount+1;
+/* //removed by Mike, 20230607
 							  }
 
 							  if (bIsFiringBeam) {	
+*/							  
 									glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 									glRotatef(-15, 0.0f, 1.0f, 0.0f);
-										drawWeapon(0.2f, -0.15f, -0.5f);
+										//edited by Mike, 20230607
+//										drawWeapon(0.2f, -0.15f, -0.5f);
+										drawWeapon(0.2f, 0.0f, -0.5f);
 									glRotatef(15, 0.0f, 1.0f, 0.0f);
 									glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);										
 							  }
