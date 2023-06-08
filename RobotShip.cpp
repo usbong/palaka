@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20230607; from 20230605; 
+ * @date updated: 20230608; from 20230607; 
  * @website address: http://www.usbong.ph
  *
  * Reference: 
@@ -1800,12 +1800,13 @@ void RobotShip::drawRobotShip()
 
 									//UPPER ARM
 									drawUpperArm(0.4f, 0.0f, 0.0f); //right
-				            	  glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);				            	  
-
-								   
-								  glRotatef(-15, 0.0f, 1.0f, 0.0f);
-								    drawWeapon(0.2f, -0.15f, -0.5f);
-								  glRotatef(15, 0.0f, 1.0f, 0.0f);								   
+								  //edited by Mike, 20230608				            	  
+//								  glRotatef(-armAngles[RIGHT], 1.0f, 0.0f, 0.0f);				            	  
+//								  glRotatef(-15, 0.0f, 1.0f, 0.0f);
+//								    drawWeapon(0.2f, -0.15f, -0.5f);
+								    drawWeapon(0.2f, -0.2f, -0.25f);
+								    
+//								  glRotatef(15, 0.0f, 1.0f, 0.0f);								   
 							   }
 							   else {							
 		            			glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
@@ -3244,8 +3245,18 @@ void RobotShip::drawRobotShip()
 								glRotatef(armAngles[RIGHT], 1.0f, 0.0f, 0.0f);
 								glRotatef(-15, 0.0f, 1.0f, 0.0f);
 */								
+
 								//drawWeapon(0.2f, -0.15f, -0.5f);
-								drawWeapon(0.2f, 0.1f, -0.5f);
+//								drawWeapon(0.2f, 0.1f, -0.5f);
+//								glTranslatef(0.0f, 0.05f, -0.1f);	
+									//position; appears as ROCKET LAUNCHER
+									//drawWeapon(0.2f, 0.1f, 0.0f);
+//									drawWeapon(0.25f, 0.2f, -0.5f);
+//									drawWeapon(0.3f, 0.2f, 0.0f);
+									//TO-DO -reverify: this
+									drawWeapon(-0.1f, -1.0f, -0.2f);									
+								//glTranslatef(0.0f, -0.05f, 0.05f);	
+
 	
 /* //removed by Mike, 20230607							
 								glRotatef(15, 0.0f, 1.0f, 0.0f);

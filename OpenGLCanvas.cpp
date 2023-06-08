@@ -2145,12 +2145,10 @@ void OpenGLCanvas::update()
 				float *beamPosXyz = {myRobotShip->getXYZPos()};
 //				float *beamPosXyz[3] = {myRobotShip->getXYZPos()};
 				
-				//edited by Mike, 20230607; from 20210207	
-				//TO-DO: -update: this 
+				//edited by Mike, 20230608; from 20230607
 //				beamPosXyz[2]+=2.0f; //right arm 
-
-				beamPosXyz[0]+=0.0f; //x
-//				beamPosXyz[1]-=7.0f; //y
+				beamPosXyz[0]+=5.0f; //x
+				beamPosXyz[1]-=8.0f; //y
 
 
 				if (i%2==0) {
