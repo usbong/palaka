@@ -1994,7 +1994,11 @@ void OpenGLCanvas::update()
 //		        sound->play_sound_clip(beam);
                 return;
               }
-            }			
+            }
+			
+			//added by Mike, 20230608
+			//combination of attack buttons
+			return;						
     	}
 		
 		//added by Mike, 20210207
@@ -2049,7 +2053,11 @@ void OpenGLCanvas::update()
 //		        sound->play_sound_clip(beam);
                 return;
               }
-            }			
+            }	
+			
+			//added by Mike, 20230608
+			//combination of attack buttons
+			return;	            					
     	}
 
 		//added by Mike, 20210207
@@ -2109,6 +2117,10 @@ void OpenGLCanvas::update()
                 return;
               }
             }			
+            
+			//added by Mike, 20230608
+			//combination of attack buttons
+			return;	            
     	}
 
 		//added by Mike, 20210207
@@ -2161,7 +2173,11 @@ void OpenGLCanvas::update()
 //		        sound->play_sound_clip(beam);
                 return;
               }
-            }			
+            }		
+			
+			//added by Mike, 20230608
+			//combination of attack buttons
+			return;	
     	}
 
     	
