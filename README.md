@@ -44,6 +44,10 @@ https://www.blender.org/
 https://www.gimp.org/<br/>
 https://www.gimp.org/tutorials/Simple_Animations/
 
+## Additional Note
+
+1) [[PS1]アーマード・コア[紹介単発]](https://www.youtube.com/watch?v=ro1_tfh7ZDs)
+
 ## Open Source Software License
 Copyright 2022~2023 SYSON, MICHAEL B.
 
