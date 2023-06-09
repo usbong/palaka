@@ -15,7 +15,7 @@
  * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200926
- * @date updated: 20230607; from 20230605; 
+ * @date updated: 20230609; from 20230607; 
  * @website: http://www.usbong.ph 
  *
  * References:
@@ -2318,12 +2318,45 @@ void OpenGLCanvas::update()
 //              myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());
 				//note: when held, beam particles move in waves
 				//note: move beams based on direction where robot faces 
+/*				//edited by Mike, 20230609
 				if (i%2==0) {
 //                	myBeam[i]->move(rotationAngle+4, myRobotShip->getXYZPos());
                 	myBeam[i]->move(rotationAngle+4, beamPosXyz);
 				}
 				else {
 //                	myBeam[i]->move(rotationAngle, myRobotShip->getXYZPos());					
+                	myBeam[i]->move(rotationAngle, beamPosXyz);					
+				}
+*/
+/*
+				if (i%3==0) {
+					beamPosXyz[0]+=1.0f;
+                	myBeam[i]->move(rotationAngle+4, beamPosXyz);
+				}
+				else if (i%3==1) {
+					beamPosXyz[0]-=1.0f;
+                	myBeam[i]->move(rotationAngle-4, beamPosXyz);
+				}
+				else {
+					beamPosXyz[0]-=1.0f;
+                	myBeam[i]->move(rotationAngle, beamPosXyz);					
+				}
+*/
+				//three columns; attack upward;
+				//TO-DO: -verify: changing shape to triangle?
+				//TO-DO: -update: EFFECT during HIT
+				if (i%3==0) {
+//					beamPosXyz[0]+=1.0f;
+//                	myBeam[i]->move(rotationAngle+4, beamPosXyz);
+                	myBeam[i]->move(rotationAngle, beamPosXyz);
+				}
+				else if (i%3==1) {
+					beamPosXyz[0]-=1.0f;
+//                	myBeam[i]->move(rotationAngle-4, beamPosXyz);
+                	myBeam[i]->move(rotationAngle, beamPosXyz);
+				}
+				else {
+					beamPosXyz[0]+=1.0f;
                 	myBeam[i]->move(rotationAngle, beamPosXyz);					
 				}
 
