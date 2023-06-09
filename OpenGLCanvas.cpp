@@ -968,6 +968,8 @@ void OpenGLCanvas::render()
     glPushMatrix();		    
 		//to make anchor/origin/reference point start at top-left
     	glTranslatef(0.0f, 0.1f, 0.0f);   
+    	//edited by Mike, 20230609
+    	//reminder: USBONG tool to load .png/.jpg files, instead of .tga files already exists
 		glColor3f(1.0f, 1.0f, 1.0f); //set to default, i.e. white
     	//glColor3f(0.0f, 0.0f, 0.0f); //set to default, i.e. black
 		
