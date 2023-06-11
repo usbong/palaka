@@ -1,5 +1,5 @@
 /*
- * Copyright 2020 Usbong Social Systems, Inc.
+ * Copyright 2020~2023 USBONG
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,10 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @company: USBONG SOCIAL SYSTEMS, INC. (USBONG)
+ * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20201019
- * @date updated: 20201129
+ * @date updated: 20230611; from 20201129
+ * @website: http://www.usbong.ph
  *
  * Acknowledgments:
  * 1) "Bulalakaw Wars" Team (2007): 
@@ -30,10 +31,22 @@
 
 //#include <SDL.h>
 
-//edited by Mike, 20201019
+//edited by Mike, 20230611; from 20201209
+/*
 #include <GL/gl.h>
-#include <GL/glut.h> 
+#include <GL/glut.h>
 #include <GL/glu.h>
+*/
+#if defined(__APPLE__)
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#include <GLUT/glut.h>
+#else
+#include <GL/gl.h>
+#include <GL/glu.h>
+#include <GL/glut.h>
+#endif
+
 
 //added by Mike, 20201114; removed by Mike, 20201114
 // disable implicit float-double casting

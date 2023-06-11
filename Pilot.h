@@ -1,5 +1,5 @@
 /*
- * Copyright 2020~2021 Usbong Social Systems, Inc.
+ * Copyright 2020~2023 USBONG
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -12,10 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * @company: USBONG SOCIAL SYSTEMS, INC. (USBONG)
+ * @company: USBONG
  * @author: SYSON, MICHAEL B. 
  * @date created: 20200930
- * @date updated: 20210219
+ * @date updated: 20230611; from 20210219
+ * @website: http://www.usbong.ph
  *
  * Acknowledgments:
  * 1) "Bulalakaw Wars" Team (2007): 
@@ -44,7 +45,7 @@
 //added by Mike, 20210129
 //+reverified: with Windows Machine; 5 with Linux Machine
 //#define MAX_WAIT_COUNT 5 //4 //added by Mike, 20210126; edited by Mike, 20210128
-
+/* //edited by Mike, 20230611
 #ifdef _WIN32
 	#define MAX_WAIT_COUNT 5 //Windows Machine
 #endif
@@ -52,6 +53,8 @@
 #ifdef linux
 	#define MAX_WAIT_COUNT 5
 #endif
+*/
+#define MAX_WAIT_COUNT 5
 
 //edited by Mike, 20210129
 //TO-DO: -add: robotship dash background movement animation
@@ -61,6 +64,7 @@
 //edited by Mike, 20210130
 //#define PILOT_MAX_DIRECTIONAL_KEY_DASH_COUNT 6//4 //10 //added by Mike, 20210128
 
+/* //edited by Mike, 20230611
 #ifdef _WIN32
 	//edited by Mike, 20210203; edited again by Mike, 20210219
 	#define PILOT_MAX_DIRECTIONAL_KEY_DASH_COUNT 4 //10 //added by Mike, 20210128
@@ -72,7 +76,9 @@
 //	#define MAX_DIRECTIONAL_KEY_DASH_COUNT 6//4 //10 //added by Mike, 20210128
 	#define PILOT_MAX_DIRECTIONAL_KEY_DASH_COUNT 4 //added by Mike, 20210128
 #endif
-
+*/
+//macOS, Linux, Windows
+#define PILOT_MAX_DIRECTIONAL_KEY_DASH_COUNT 4
 
 /* //edited by Mike, 20201207
 //added by Mike, 20201201
