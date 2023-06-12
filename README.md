@@ -44,9 +44,12 @@ https://www.blender.org/
 https://www.gimp.org/<br/>
 https://www.gimp.org/tutorials/Simple_Animations/
 
-## Additional Note
+## Additional Notes
 
 1) [[PS1]アーマード・コア[紹介単発]](https://www.youtube.com/watch?v=ro1_tfh7ZDs)
+
+2) https://github.com/usbong/pagongHalang/blob/main/MyDynamicObject.cpp;<br/>
+--> compressed image types, e.g. .png, .jpg, via SDL.h, SDL_image.h
 
 ## Open Source Software License
 Copyright 2022~2023 SYSON, MICHAEL B.
