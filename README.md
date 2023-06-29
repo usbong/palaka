@@ -2,7 +2,11 @@
 
 <img src="https://github.com/usbong/documentation/blob/master/Usbong/R%26D/Automotive/UsbongAutomotive/screenshots/UsbongAutomotiveV20210205T1703.gif" width="60%">
 
-### Reference: [Usbong R&D: Automotive](https://github.com/usbong/documentation/tree/master/Usbong/R%26D/Automotive/UsbongAutomotive)
+### Reference: 
+
+1) [Usbong R&D: Automotive](https://github.com/usbong/documentation/tree/master/Usbong/R%26D/Automotive/UsbongAutomotive)
+
+2) [Usbong Pagong HALANG: SDL Installation](https://github.com/usbong/pagongHalang/blob/main/README.md)
 
 ## Installation Notes
 
